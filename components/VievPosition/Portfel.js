@@ -7,10 +7,11 @@ function Portfel(props) {
 
   let propsNumber = props.number+' акций';
   let priceProps = props.price+'$';
+
   let style='';
   let styleButton='';
 
-  const [obj,setObj] = useState({nameProps:propsNumber,
+  const [obj,setObj] = useState({nameProps:props.name,
                                  propsNumber:propsNumber,
                                  priceProps:priceProps
                                 });
