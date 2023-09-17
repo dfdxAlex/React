@@ -1,8 +1,7 @@
 import "./Portfel.css";
 import Profit from "./Profit";
+import ClickKill from "./ClickKill";
 import react, {useState} from "react"
-
-
 
 function Portfel(props) {
 
@@ -16,21 +15,17 @@ function Portfel(props) {
                                  priceProps:priceProps
                                 });
 
-  function clickKill()
-  {
-    setObj({
-      nameProps:'',
-      propsNumber:'',
-      priceProps:''
-    });
-  }  
-
   if (obj.nameProps!='') {
     style="invest";
   } else {
     styleButton="display-non";
   }
 
+  function clickKillModul()
+  {
+    ClickKill(setObj);
+  }
+  
     return (
       <div>
         <div className={style}>{obj.nameProps}</div>
@@ -42,7 +37,7 @@ function Portfel(props) {
           priceClose={props.priceClose}
           number={props.number}
         />
-        <button className={styleButton} onClick={clickKill}>Удалить</button>
+        <button className={styleButton} onClick={clickKillModul}>Удалить</button>
         <br></br>
         <br></br>
       </div>
