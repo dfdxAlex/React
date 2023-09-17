@@ -1,0 +1,10 @@
+.invest {
+    border: 1px solid black;
+    margin-left: 50px;
+    background-color: aquamarine;
+    width: 150px;
+}
+
+.display-non {
+    display: none;
+}

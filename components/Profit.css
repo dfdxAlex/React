@@ -1,0 +1,17 @@
+.profit {
+    border: 1px solid black;
+    margin-left: 50px;
+    background-color: rgb(210, 245, 15);
+    width: 150px;
+    color:aliceblue;
+
+}
+
+.profit-plus {
+    background-color: rgb(45, 143, 20);
+}
+
+.profit-minus {
+    background-color: rgb(197, 45, 11);
+}
+
