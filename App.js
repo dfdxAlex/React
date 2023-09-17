@@ -1,5 +1,5 @@
-import Portfel from './components/Portfel.js';
-import Color from "./components/Color.js";
+import Portfel from './components/VievPosition/Portfel.js';
+import Color from "./components/VievPosition/Color.js";
 
 function App() {
 
