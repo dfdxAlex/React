@@ -1,0 +1,9 @@
+.user-form--label, .user-form--button {
+    display: block;
+    margin-top: 20px;
+}
+
+.user-form {
+    float:right;
+    margin-right: 30px;
+}
