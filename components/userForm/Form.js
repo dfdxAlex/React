@@ -10,27 +10,28 @@ function Form()
 
     function nameHandlerChange(e)
     {
-        // console.log(e.target.value);
         setName(e.target.value);
     }
 
     function countHandlerChange(e)
     {
-        // console.log(e.target.value);
         setCount(e.target.value);
     }
 
     function priceHandlerChange(e)
     {
-        // console.log(e.target.value);
         setPrice(e.target.value);
     }
 
     function closePriceHandlerChange(e)
     {
-        // console.log(e.target.value);
         setClosePrice(e.target.value);
     }
+
+    console.log(name);
+    console.log(count);
+    console.log(price);
+    console.log(closePrice);
 
     return (
         <div className="user-form">
