@@ -2,7 +2,22 @@ import "./Form.css";
 
 function Form()
 {
-    function handlerChange(e)
+    function nameHandlerChange(e)
+    {
+        console.log(e.target.value);
+    }
+
+    function countHandlerChange(e)
+    {
+        console.log(e.target.value);
+    }
+
+    function priceHandlerChange(e)
+    {
+        console.log(e.target.value);
+    }
+
+    function closePriceHandlerChange(e)
     {
         console.log(e.target.value);
     }
@@ -20,7 +35,7 @@ function Form()
                   className="user-form--input" 
                   id="name" 
                   type="text" 
-                  onChange={handlerChange}
+                  onChange={nameHandlerChange}
                 >
                 </input>
                 <label 
@@ -33,6 +48,7 @@ function Form()
                   className="user-form--input" 
                   id="num" 
                   type="number" 
+                  onChange={countHandlerChange}
                 >
                 </input>
                 <label 
@@ -45,6 +61,7 @@ function Form()
                   className="user-form--input" 
                   id="price" 
                   type="number" 
+                  onChange={priceHandlerChange}
                 >
                 </input>
                 <label 
@@ -57,6 +74,7 @@ function Form()
                   className="user-form--input" 
                   id="price-close" 
                   type="number" 
+                  onChange={closePriceHandlerChange}
                 >
                 </input>
                 <button
