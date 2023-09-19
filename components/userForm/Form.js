@@ -3,35 +3,32 @@ import "./Form.css";
 
 function Form()
 {
-    const [name, setName] = useState('');
-    const [count, setCount] = useState('');
-    const [price, setPrice] = useState('');
-    const [closePrice, setClosePrice] = useState('');
+    const [obj, setObj] = useState({nameA:'', 
+                                    countA:'', 
+                                    price:'', 
+                                    closePrice:''});
 
     function nameHandlerChange(e)
     {
-        setName(e.target.value);
+      setObj({...obj, nameA: e.target.value});
     }
 
     function countHandlerChange(e)
     {
-        setCount(e.target.value);
+      setObj({...obj, countA: e.target.value});
     }
 
     function priceHandlerChange(e)
     {
-        setPrice(e.target.value);
+      setObj({...obj, price: e.target.value});
     }
 
     function closePriceHandlerChange(e)
     {
-        setClosePrice(e.target.value);
+      setObj({...obj, closePrice: e.target.value});
     }
 
-    console.log(name);
-    console.log(count);
-    console.log(price);
-    console.log(closePrice);
+    console.log(obj);
 
     return (
         <div className="user-form">
