@@ -7,7 +7,6 @@ function App() {
   return (
     <Color>
       <Form>
-
       </Form>
       <Portfel  
         name={"Google"}

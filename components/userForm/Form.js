@@ -2,12 +2,17 @@ import "./Form.css";
 
 function Form()
 {
+    function handlerChange(e)
+    {
+        console.log(e.target.value);
+    }
+
     return (
         <div className="user-form">
             <form className="user-form--form">
                 <label 
                   className="user-form--label" 
-                  for="name"
+                  htmlFor="name"
                 >
                   Имя актива
                 </label>
@@ -15,11 +20,12 @@ function Form()
                   className="user-form--input" 
                   id="name" 
                   type="text" 
+                  onChange={handlerChange}
                 >
                 </input>
                 <label 
                   className="user-form--label" 
-                  for="num"
+                  htmlFor="num"
                 >
                   Число акций
                 </label>
@@ -31,7 +37,7 @@ function Form()
                 </input>
                 <label 
                   className="user-form--label" 
-                  for="price"
+                  htmlFor="price"
                 >
                   Цена одной акции
                 </label>
@@ -43,7 +49,7 @@ function Form()
                 </input>
                 <label 
                   className="user-form--label" 
-                  for="price-close"
+                  htmlFor="price-close"
                 >
                   Цена закрытия
                 </label>
