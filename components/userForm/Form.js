@@ -1,25 +1,35 @@
+import react, {useState} from "react";
 import "./Form.css";
 
 function Form()
 {
+    const [name, setName] = useState('');
+    const [count, setCount] = useState('');
+    const [price, setPrice] = useState('');
+    const [closePrice, setClosePrice] = useState('');
+
     function nameHandlerChange(e)
     {
-        console.log(e.target.value);
+        // console.log(e.target.value);
+        setName(e.target.value);
     }
 
     function countHandlerChange(e)
     {
-        console.log(e.target.value);
+        // console.log(e.target.value);
+        setCount(e.target.value);
     }
 
     function priceHandlerChange(e)
     {
-        console.log(e.target.value);
+        // console.log(e.target.value);
+        setPrice(e.target.value);
     }
 
     function closePriceHandlerChange(e)
     {
-        console.log(e.target.value);
+        // console.log(e.target.value);
+        setClosePrice(e.target.value);
     }
 
     return (
