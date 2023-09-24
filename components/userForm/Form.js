@@ -10,25 +10,37 @@ function Form()
 
     function nameHandlerChange(e)
     {
-      setObj({...obj, nameA: e.target.value});
+      setObj((obj)=>{
+          return {...obj, nameA: e.target.value}
+        }
+        );
     }
 
     function countHandlerChange(e)
     {
-      setObj({...obj, countA: e.target.value});
+      setObj((obj)=>{
+        return {...obj, countA: e.target.value}
+      }
+      );
     }
 
     function priceHandlerChange(e)
     {
-      setObj({...obj, price: e.target.value});
+      setObj((obj)=>{
+        return {...obj, price: e.target.value}
+      }
+      );
     }
 
     function closePriceHandlerChange(e)
     {
-      setObj({...obj, closePrice: e.target.value});
+      setObj((obj)=>{
+        return {...obj, closePrice: e.target.value}
+      }
+      );
     }
 
-    console.log(obj);
+    // console.log(obj);
 
     return (
         <div className="user-form">
