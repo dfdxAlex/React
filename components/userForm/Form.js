@@ -44,6 +44,16 @@ function Form()
     {
         event.preventDefault();
 
+        if (obj.nameA!="" 
+          && obj.countA!="" 
+            && obj.price!="" 
+              && obj.closePrice!="" 
+                ) {
+                    setObj({nameA:'', 
+                            countA:'', 
+                            price:'', 
+                            closePrice:''});
+                  }
         console.log(obj);
     }
 
@@ -61,6 +71,7 @@ function Form()
                   id="name" 
                   type="text" 
                   onChange={nameHandlerChange}
+                  value={obj.nameA}
                 >
                 </input>
                 <label 
@@ -74,6 +85,7 @@ function Form()
                   id="num" 
                   type="number" 
                   onChange={countHandlerChange}
+                  value={obj.countA}
                 >
                 </input>
                 <label 
@@ -87,6 +99,7 @@ function Form()
                   id="price" 
                   type="number" 
                   onChange={priceHandlerChange}
+                  value={obj.price}
                 >
                 </input>
                 <label 
@@ -100,6 +113,7 @@ function Form()
                   id="price-close" 
                   type="number" 
                   onChange={closePriceHandlerChange}
+                  value={obj.closePrice}
                 >
                 </input>
                 <button
