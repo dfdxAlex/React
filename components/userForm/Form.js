@@ -40,11 +40,16 @@ function Form()
       );
     }
 
-    // console.log(obj);
+    function formHungler(event)
+    {
+        event.preventDefault();
+
+        console.log(obj);
+    }
 
     return (
         <div className="user-form">
-            <form className="user-form--form">
+            <form className="user-form--form" onSubmit={formHungler}>
                 <label 
                   className="user-form--label" 
                   htmlFor="name"
@@ -99,6 +104,7 @@ function Form()
                 </input>
                 <button
                   className="user-form--button"
+                  type="submit"
                 >
                 Добавить
                 </button>
