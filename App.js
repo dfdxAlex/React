@@ -4,9 +4,23 @@ import Form from "./components/userForm/Form.js"
 
 function App() {
 
+  function testHandler(obj)
+  {
+      console.log("Сработал Апп");
+      console.log(obj);
+  }  
+
+  function getFormSelect(getSelectInForm)
+  {
+    console.log(getSelectInForm);
+  }
+
   return (
     <Color>
-      <Form>
+      <Form 
+        onTest={testHandler}
+        getSelect={getFormSelect}
+      >
       </Form>
       <Portfel  
         name={"Google"}

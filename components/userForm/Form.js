@@ -1,12 +1,15 @@
 import react, {useState} from "react";
 import "./Form.css";
 
-function Form()
+function Form(props)
 {
+
+
     const [obj, setObj] = useState({nameA:'', 
                                     countA:'', 
                                     price:'', 
                                     closePrice:''});
+    const [selectPoz, setSelectPoz] = useState ("all");
 
     function nameHandlerChange(e)
     {
@@ -40,23 +43,30 @@ function Form()
       );
     }
 
+    function chanceSelectHungler(event)
+    {
+      setSelectPoz(event.target.value);
+      props.getSelect(event.target.value);
+    }
+
     function formHungler(event)
     {
         event.preventDefault();
 
-        if (obj.nameA!="" 
-          && obj.countA!="" 
-            && obj.price!="" 
-              && obj.closePrice!="" 
+        if (obj.nameA!=="" 
+          && obj.countA!=="" 
+            && obj.price!=="" 
+              && obj.closePrice!=="" 
                 ) {
+                    props.onTest(obj);
                     setObj({nameA:'', 
                             countA:'', 
                             price:'', 
                             closePrice:''});
                   }
-        console.log(obj);
-    }
 
+
+    }
     return (
         <div className="user-form">
             <form className="user-form--form" onSubmit={formHungler}>
@@ -116,6 +126,13 @@ function Form()
                   value={obj.closePrice}
                 >
                 </input>
+                <div>
+                  <select value = {selectPoz} onChange={chanceSelectHungler}>
+                    <option value="all">Все</option>
+                    <option value="profitable">Только прибыльные</option>
+                    <option value="unProfitable">Только убыточнык</option>
+                  </select>
+                </div>
                 <button
                   className="user-form--button"
                   type="submit"
