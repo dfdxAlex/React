@@ -64,7 +64,7 @@ function Form(props)
                     props.getObj(obj);
                   }
     }
-    
+
     return (
         <div className="user-form">
             <form className="user-form--form" onSubmit={formHungler}>
@@ -76,48 +76,27 @@ function Form(props)
                     event={nameHandlerChange}
                 />
 
-                <label 
-                  className="user-form--label" 
-                  htmlFor="num"
-                >
-                  Число акций
-                </label>
-                <input 
-                  className="user-form--input" 
-                  id="num" 
-                  type="number" 
-                  onChange={countHandlerChange}
-                  value={obj.countA}
-                >
-                </input>
-                <label 
-                  className="user-form--label" 
-                  htmlFor="price"
-                >
-                  Цена одной акции
-                </label>
-                <input 
-                  className="user-form--input" 
-                  id="price" 
-                  type="number" 
-                  onChange={priceHandlerChange}
-                  value={obj.price}
-                >
-                </input>
-                <label 
-                  className="user-form--label" 
-                  htmlFor="price-close"
-                >
-                  Цена закрытия
-                </label>
-                <input 
-                  className="user-form--input" 
-                  id="price-close" 
-                  type="number" 
-                  onChange={closePriceHandlerChange}
-                  value={obj.closePrice}
-                >
-                </input>
+                <InputTextForm 
+                    nameInput={"Число акций"}
+                    typeInput={"number"}
+                    obj={obj}
+                    event={countHandlerChange}
+                />
+
+                <InputTextForm 
+                    nameInput={"Цена одной акции"}
+                    typeInput={"number"}
+                    obj={obj}
+                    event={priceHandlerChange}
+                />
+
+                <InputTextForm 
+                    nameInput={"Цена закрытия"}
+                    typeInput={"number"}
+                    obj={obj}
+                    event={closePriceHandlerChange}
+                />
+
                 <div>
                   <select value = {selectPoz} onChange={chanceSelectHungler}>
                     <option value="all">Все</option>
