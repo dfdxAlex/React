@@ -1,6 +1,9 @@
 import react, {useState} from "react";
 import "./Form.css";
 import InputTextForm from "./InputTextForm.js";
+import SelectOptionForm from "./SelectOptionForm.js";
+import SelectOptionForm from "./SelectOptionForm.js";
+import ButtonForm from "./ButtonForm";
 
 function Form(props)
 {
@@ -97,19 +100,16 @@ function Form(props)
                     event={closePriceHandlerChange}
                 />
 
-                <div>
-                  <select value = {selectPoz} onChange={chanceSelectHungler}>
-                    <option value="all">Все</option>
-                    <option value="profitable">Только прибыльные</option>
-                    <option value="unProfitable">Только убыточнык</option>
-                  </select>
-                </div>
-                <button
-                  className="user-form--button"
-                  type="submit"
-                >
-                Добавить
-                </button>
+                <SelectOptionForm 
+                    selectPoz={selectPoz}
+                    onChange={chanceSelectHungler}
+                />
+                
+                <ButtonForm>
+                  
+                </ButtonForm>
+
+
             </form>
         </div>
     );
