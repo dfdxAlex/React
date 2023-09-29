@@ -4,6 +4,7 @@ import "./Form.css";
 function Form(props)
 {
 
+   
 
     const [obj, setObj] = useState({nameA:'', 
                                     countA:'', 
@@ -58,11 +59,11 @@ function Form(props)
             && obj.price!=="" 
               && obj.closePrice!=="" 
                 ) {
-                    props.onTest(obj);
                     setObj({nameA:'', 
                             countA:'', 
                             price:'', 
                             closePrice:''});
+                    props.getObj(obj);
                   }
 
 

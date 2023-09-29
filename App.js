@@ -4,22 +4,21 @@ import Form from "./components/userForm/Form.js"
 
 function App() {
 
-  function testHandler(obj)
-  {
-      console.log("Сработал Апп");
-      console.log(obj);
-  }  
-
   function getFormSelect(getSelectInForm)
   {
     console.log(getSelectInForm);
   }
 
+  function getObjUp(obj)
+  {
+    console.log(obj);
+  }
+
   return (
     <Color>
       <Form 
-        onTest={testHandler}
         getSelect={getFormSelect}
+        getObj={getObjUp}
       >
       </Form>
       <Portfel  
