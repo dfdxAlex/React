@@ -1,7 +1,7 @@
 
-import "./InputText.css";
+import "./InputTextForm.css";
 
-function InputText(props)
+function InputTextForm(props)
 {
 
     return (
@@ -25,4 +25,4 @@ function InputText(props)
 }
 
 
-export default InputText;
+export default InputTextForm;

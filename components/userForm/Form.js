@@ -1,12 +1,9 @@
 import react, {useState} from "react";
 import "./Form.css";
-import InputText from "./InputText.js";
+import InputTextForm from "./InputTextForm.js";
 
 function Form(props)
 {
-
-   
-
     const [obj, setObj] = useState({nameA:'', 
                                     countA:'', 
                                     price:'', 
@@ -66,29 +63,13 @@ function Form(props)
                             closePrice:''});
                     props.getObj(obj);
                   }
-
-
     }
+    
     return (
         <div className="user-form">
             <form className="user-form--form" onSubmit={formHungler}>
                 
-                {/* <label 
-                  className="user-form--label" 
-                  htmlFor="name"
-                >
-                  Имя актива
-                </label>
-                <input 
-                  className="user-form--input" 
-                  id="name" 
-                  type="text" 
-                  onChange={nameHandlerChange}
-                  value={obj.nameA}
-                >
-    </input> */}
-
-                <InputText 
+                <InputTextForm 
                     nameInput={"Имя актива"}
                     typeInput={"text"}
                     obj={obj}
