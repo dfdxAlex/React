@@ -1,5 +1,6 @@
 import react, {useState} from "react";
 import "./Form.css";
+import InputText from "./InputText.js";
 
 function Form(props)
 {
@@ -71,7 +72,8 @@ function Form(props)
     return (
         <div className="user-form">
             <form className="user-form--form" onSubmit={formHungler}>
-                <label 
+                
+                {/* <label 
                   className="user-form--label" 
                   htmlFor="name"
                 >
@@ -84,7 +86,15 @@ function Form(props)
                   onChange={nameHandlerChange}
                   value={obj.nameA}
                 >
-                </input>
+    </input> */}
+
+                <InputText 
+                    nameInput={"Имя актива"}
+                    typeInput={"text"}
+                    obj={obj}
+                    event={nameHandlerChange}
+                />
+
                 <label 
                   className="user-form--label" 
                   htmlFor="num"
