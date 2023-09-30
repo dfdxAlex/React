@@ -2,7 +2,6 @@ import react, {useState} from "react";
 import "./Form.css";
 import InputTextForm from "./InputTextForm.js";
 import SelectOptionForm from "./SelectOptionForm.js";
-import SelectOptionForm from "./SelectOptionForm.js";
 import ButtonForm from "./ButtonForm";
 
 function Form(props)
@@ -75,28 +74,28 @@ function Form(props)
                 <InputTextForm 
                     nameInput={"Имя актива"}
                     typeInput={"text"}
-                    obj={obj}
+                    obj={obj.nameA}
                     event={nameHandlerChange}
                 />
 
                 <InputTextForm 
                     nameInput={"Число акций"}
                     typeInput={"number"}
-                    obj={obj}
+                    obj={obj.countA}
                     event={countHandlerChange}
                 />
 
                 <InputTextForm 
                     nameInput={"Цена одной акции"}
                     typeInput={"number"}
-                    obj={obj}
+                    obj={obj.price}
                     event={priceHandlerChange}
                 />
 
                 <InputTextForm 
                     nameInput={"Цена закрытия"}
                     typeInput={"number"}
-                    obj={obj}
+                    obj={obj.closePrice}
                     event={closePriceHandlerChange}
                 />
 
@@ -106,7 +105,6 @@ function Form(props)
                 />
                 
                 <ButtonForm>
-                  
                 </ButtonForm>
 
 

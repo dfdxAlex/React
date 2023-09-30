@@ -1,3 +1,5 @@
+import "./ButtonForm.css";
+
 function ButtonForm()
 {
     return (

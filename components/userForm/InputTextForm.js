@@ -17,7 +17,7 @@ function InputTextForm(props)
                   id="inputModul" 
                   type={props.typeInput} 
                   onChange={props.event}
-                  value={props.obj.nameA}
+                  value={props.obj}
                 >
                 </input>
         </div>
