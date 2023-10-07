@@ -1,0 +1,12 @@
+.name{
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    line-height: 35px;
+    background-color: rgb(246, 177, 112);
+}
+
+.name-checkbox{
+    height: 20px;
+    width: 20px;
+}
