@@ -6,7 +6,7 @@ function SettingForCv()
     return (
         <div>
             <h1>The content CV</h1>
-            <form method="post" action="#">
+            <form method="post" action="setPost.php">
                 <Element
                   namePunkt="Name"
                   nameForPost="name"
