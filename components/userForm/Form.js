@@ -7,9 +7,9 @@ import ButtonForm from "./ButtonForm";
 function Form(props)
 {
     const [obj, setObj] = useState({nameA:'', 
-                                    countA:'', 
+                                    number:'', 
                                     price:'', 
-                                    closePrice:''});
+                                    priceClose:''});
     const [selectPoz, setSelectPoz] = useState ("all");
 
     function nameHandlerChange(e)
@@ -23,7 +23,7 @@ function Form(props)
     function countHandlerChange(e)
     {
       setObj((obj)=>{
-        return {...obj, countA: e.target.value}
+        return {...obj, number: e.target.value}
       }
       );
     }
@@ -39,7 +39,7 @@ function Form(props)
     function closePriceHandlerChange(e)
     {
       setObj((obj)=>{
-        return {...obj, closePrice: e.target.value}
+        return {...obj, priceClose: e.target.value}
       }
       );
     }
@@ -55,14 +55,14 @@ function Form(props)
         event.preventDefault();
 
         if (obj.nameA!=="" 
-          && obj.countA!=="" 
+          && obj.number!=="" 
             && obj.price!=="" 
-              && obj.closePrice!=="" 
+              && obj.priceClose!=="" 
                 ) {
                     setObj({nameA:'', 
-                            countA:'', 
+                            number:'', 
                             price:'', 
-                            closePrice:''});
+                            priceClose:''});
                     props.getObj(obj);
                   }
     }
@@ -81,7 +81,7 @@ function Form(props)
                 <InputTextForm 
                     nameInput={"Число акций"}
                     typeInput={"number"}
-                    obj={obj.countA}
+                    obj={obj.number}
                     event={countHandlerChange}
                 />
 
@@ -95,7 +95,7 @@ function Form(props)
                 <InputTextForm 
                     nameInput={"Цена закрытия"}
                     typeInput={"number"}
-                    obj={obj.closePrice}
+                    obj={obj.priceClose}
                     event={closePriceHandlerChange}
                 />
 

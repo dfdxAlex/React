@@ -5,13 +5,13 @@ import react, {useState} from "react"
 
 function Portfel(props) {
 
-  let propsNumber = props.number+' акций';
-  let priceProps = props.price+'$';
+  let propsNumber = props.el.number+' акций';
+  let priceProps = props.el.price+'$';
 
   let style='';
   let styleButton='';
 
-  const [obj,setObj] = useState({nameProps:props.name,
+  const [obj,setObj] = useState({nameProps:props.el.nameA,
                                  propsNumber:propsNumber,
                                  priceProps:priceProps
                                 });
@@ -34,9 +34,9 @@ function Portfel(props) {
         <div className={style}>{obj.priceProps}</div>
         <Profit
           priceState={obj.nameProps}
-          price={props.price}
-          priceClose={props.priceClose}
-          number={props.number}
+          price={props.el.price}
+          priceClose={props.el.priceClose}
+          number={props.el.number}
         />
         <button className={styleButton} onClick={clickKillModul}>Удалить</button>
         <br></br>

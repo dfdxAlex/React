@@ -1,46 +1,48 @@
 import Portfel from './components/VievPosition/Portfel.js';
 import Color from "./components/VievPosition/Color.js";
 import Form from "./components/userForm/Form.js"
+import react, {useState} from "react";
+
+let MAS = [
+  {
+    nameA:"Google",
+    number:10,
+    price:200,
+    priceClose:190
+  },
+  {
+    nameA:"Apple",
+    number:20,
+    price:150,
+    priceClose:190
+  },
+  {
+    nameA:"Tesla",
+    number:4,
+    price:900,
+    priceClose:990
+  },
+  {
+    nameA:"Приват",
+    number:1,
+    price:230,
+    priceClose:240
+  }
+];
 
 function App() {
 
+   const [mas, setMas] = useState(MAS);
 
   function getObjUp(obj)
   {
-    console.log(obj);
+    setMas((oldMas)=>[...oldMas, obj]);
   }
 
   function getFormSelect(getSelectInForm)
   {
     console.log(getSelectInForm);
   }
-
-  let mas = [
-    {
-      nameA:"Google",
-      number:10,
-      price:200,
-      priceClose:190
-    },
-    {
-      nameA:"Apple",
-      number:20,
-      price:150,
-      priceClose:190
-    },
-    {
-      nameA:"Tesla",
-      number:4,
-      price:900,
-      priceClose:990
-    },
-    {
-      nameA:"Приват",
-      number:1,
-      price:230,
-      priceClose:240
-    }
-  ];
 
   return (
     <Color>
@@ -53,11 +55,13 @@ function App() {
       {
           mas.map((el, index)=>(
             <Portfel  
+
               key={index}
-              name={el.nameA}
-              number={el.number}
-              price={el.price}
-              priceClose={el.priceClose}
+              el={el}
+              // name={el.nameA}
+              // number={el.number}
+              // price={el.price}
+              // priceClose={el.priceClose}
             />
           ))
       }
