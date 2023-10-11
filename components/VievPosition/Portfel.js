@@ -10,6 +10,7 @@ function Portfel(props) {
 
   let style='';
   let styleButton='';
+  let delPozition="";
 
   const [obj,setObj] = useState({nameProps:props.el.nameA,
                                  propsNumber:propsNumber,
@@ -20,6 +21,7 @@ function Portfel(props) {
     style="invest";
   } else {
     styleButton="display-non";
+    delPozition="delPozition";
   }
 
   function clickKillModul()
@@ -28,15 +30,13 @@ function Portfel(props) {
   }
   
     return (
-      <div>
+      <div className={delPozition}>
         <div className={style}>{obj.nameProps}</div>
         <div className={style}>{obj.propsNumber}</div>
         <div className={style}>{obj.priceProps}</div>
         <Profit
           priceState={obj.nameProps}
-          price={props.el.price}
-          priceClose={props.el.priceClose}
-          number={props.el.number}
+          el={props.el}
         />
         <button className={styleButton} onClick={clickKillModul}>Удалить</button>
         <br></br>

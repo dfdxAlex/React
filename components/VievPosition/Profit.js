@@ -10,19 +10,21 @@ function Profit(props) {
 
 
   if (props.priceState!="") {
-    if (props.priceClose>props.price) {
+    if (props.el.priceClose>props.el.price) {
         profitString = "Прибыль:";
-        profit = (props.priceClose - props.price) * props.number  - 2 * spred;
+        profit = (props.el.priceClose - props.el.price) * props.el.number  - 2 * spred;
         colorProfit = "profit profit-plus";
+        
     } else {
         profitString = "Убыток:";
-        profit = (props.price - props.priceClose) * props.number  + 2 * spred;
+        profit = (props.el.price - props.el.priceClose) * props.el.number  + 2 * spred;
         colorProfit = "profit profit-minus";
     }
         outProfit = profitString+profit;
     if (profit === 0) colorProfit = "profit";
 
-  } else {
+  } 
+  else {
     colorProfit='';
     outProfit='';
   }

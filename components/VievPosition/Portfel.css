@@ -5,6 +5,8 @@
     width: 150px;
 }
 
-.display-non {
+.display-non, .delPozition {
     display: none;
 }
+
+
