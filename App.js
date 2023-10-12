@@ -3,26 +3,18 @@ import Color from "./components/VievPosition/Color.js";
 import Form from "./components/userForm/Form.js"
 import MAS from "./investor/models/data/array/MasDefaultPosition.js"
 import react, {useState} from "react";
+import getFormSelect from  "./investor/controllers/userControllers/GetFormSelect.js"
+import getObjUp from  "./investor/controllers/userControllers/GetObjUp.js"
 
 function App() {
 
    const [mas, setMas] = useState(MAS);
 
-  function getObjUp(obj)
-  {
-    setMas((oldMas)=>[...oldMas, obj]);
-  }
-
-  function getFormSelect(getSelectInForm)
-  {
-    console.log(getSelectInForm);
-  }
-
   return (
     <Color>
       <Form 
         getSelect={getFormSelect}
-        getObj={getObjUp}
+        getObj={(obj) => getObjUp (obj, setMas)}
       >
       </Form>
 
