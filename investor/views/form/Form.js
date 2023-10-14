@@ -1,8 +1,8 @@
 import react, {useState} from "react";
 import "./Form.css";
-import InputTextForm from "./InputTextForm.js";
-import SelectOptionForm from "./SelectOptionForm.js";
-import ButtonForm from "./ButtonForm";
+import InputTextForm from "../../../components/userForm/InputTextForm.js";
+import SelectOptionForm from "../../../components/userForm/SelectOptionForm.js";
+import ButtonForm from "../../../components/userForm/ButtonForm";
 
 function Form(props)
 {
