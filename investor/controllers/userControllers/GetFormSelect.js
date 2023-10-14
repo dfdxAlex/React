@@ -1,7 +1,7 @@
 
-function getFormSelect(getSelectInForm)
+function GetFormSelect(getSelectInForm)
 {
   console.log(getSelectInForm);
 }
 
-export default getFormSelect;
+export default GetFormSelect;

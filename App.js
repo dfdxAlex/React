@@ -3,8 +3,8 @@ import Color from "./components/VievPosition/Color.js";
 import Form from "./investor/views/form/Form.js"
 import MAS from "./investor/models/data/array/MasDefaultPosition.js"
 import react, {useState} from "react";
-import getFormSelect from  "./investor/controllers/userControllers/GetFormSelect.js"
-import getObjUp from  "./investor/controllers/userControllers/GetObjUp.js"
+import GetFormSelect from  "./investor/controllers/userControllers/GetFormSelect.js"
+import GetObjUp from  "./investor/controllers/userControllers/GetObjUp.js"
 
 
 
@@ -16,8 +16,8 @@ function App() {
     <Color>
 
       <Form 
-        getSelect={getFormSelect}
-        getObj={(obj) => getObjUp (obj, setMas)}
+        getSelect={GetFormSelect}
+        getObj={(obj) => GetObjUp (obj, setMas)}
       >
       </Form>
 

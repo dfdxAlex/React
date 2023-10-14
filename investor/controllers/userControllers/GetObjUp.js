@@ -1,6 +1,6 @@
-function getObjUp(obj, setMas)
+function GetObjUp(obj, setMas)
 {
   setMas((oldMas)=>[...oldMas, obj]);
 }
 
-export default getObjUp;
+export default GetObjUp;

@@ -10,6 +10,7 @@ function Form(props)
                                     number:'', 
                                     price:'', 
                                     priceClose:''});
+                                    
     const [selectPoz, setSelectPoz] = useState ("all");
 
     function nameHandlerChange(e)
