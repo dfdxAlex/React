@@ -4,6 +4,10 @@ import InputTextForm from "../../../components/userForm/InputTextForm.js";
 import SelectOptionForm from "../../../components/userForm/SelectOptionForm.js";
 import ButtonForm from "../../../components/userForm/ButtonForm";
 import PositionInfoState from "../../models/data/state/PositionInfoState.js";
+import CreateNameHandlerChange from "../../controllers/setStateForm/CreateNameHandlerChange.js";
+import CreateCountHandlerChange from "../../controllers/setStateForm/CreateCountHandlerChange.js";
+import CreatePriceHandlerChange from "../../controllers/setStateForm/CreatePriceHandlerChange.js";
+import CreateClosePriceHandlerChange from "../../controllers/setStateForm/CreateClosePriceHandlerChange.js";
 
 function Form(props)
 {
@@ -11,38 +15,16 @@ function Form(props)
 
     const [selectPoz, setSelectPoz] = useState ("all");
 
-    function nameHandlerChange(e)
-    {
-      setObj((obj)=>{
-          return {...obj, nameA: e.target.value}
-        }
-        );
-    }
+    const nameHandlerChange = CreateNameHandlerChange(obj, setObj);
 
-    function countHandlerChange(e)
-    {
-      setObj((obj)=>{
-        return {...obj, number: e.target.value}
-      }
-      );
-    }
+    const countHandlerChange = CreateCountHandlerChange(obj, setObj);
 
-    function priceHandlerChange(e)
-    {
-      setObj((obj)=>{
-        return {...obj, price: e.target.value}
-      }
-      );
-    }
+    const priceHandlerChange = CreatePriceHandlerChange(obj, setObj);
 
-    function closePriceHandlerChange(e)
-    {
-      setObj((obj)=>{
-        return {...obj, priceClose: e.target.value}
-      }
-      );
-    }
+    const closePriceHandlerChange = CreateClosePriceHandlerChange(obj, setObj);
 
+
+    
     function chanceSelectHungler(event)
     {
       setSelectPoz(event.target.value);
