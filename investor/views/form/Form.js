@@ -3,14 +3,12 @@ import "./Form.css";
 import InputTextForm from "../../../components/userForm/InputTextForm.js";
 import SelectOptionForm from "../../../components/userForm/SelectOptionForm.js";
 import ButtonForm from "../../../components/userForm/ButtonForm";
+import PositionInfoState from "../../models/data/state/PositionInfoState.js";
 
 function Form(props)
 {
-    const [obj, setObj] = useState({nameA:'', 
-                                    number:'', 
-                                    price:'', 
-                                    priceClose:''});
-                                    
+    const {obj, setObj} = PositionInfoState();
+
     const [selectPoz, setSelectPoz] = useState ("all");
 
     function nameHandlerChange(e)
