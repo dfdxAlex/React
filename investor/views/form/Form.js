@@ -6,6 +6,7 @@ import ButtonForm from "../../../components/userForm/ButtonForm";
 import PositionInfoState from "../../models/data/state/PositionInfoState.js";
 import HadlerForm from "../../controllers/setStateForm/HadlerForm.js";
 import CreatChanceSelectHungler from "../../controllers/setStateSelect/CreatChanceSelectHungler.js";
+import CreateFormHungler from "../../controllers/userControllers/CreateFormHungler.js";
 
 function Form(props)
 {
@@ -20,24 +21,8 @@ function Form(props)
     const chanceSelectHungler = CreatChanceSelectHungler(selectPoz, 
                                                          setSelectPoz, 
                                                          props);
-    
-
-    function formHungler(event)
-    {
-        event.preventDefault();
-
-        if (obj.nameA!=="" 
-          && obj.number!=="" 
-            && obj.price!=="" 
-              && obj.priceClose!=="" 
-                ) {
-                    setObj({nameA:'', 
-                            number:'', 
-                            price:'', 
-                            priceClose:''});
-                    props.getObj(obj);
-                  }
-    }
+                                                         
+    const formHungler = CreateFormHungler(obj, setObj, props);
 
     return (
         <div className="user-form">
