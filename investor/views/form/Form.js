@@ -4,19 +4,15 @@ import InputTextForm from "../../../components/userForm/InputTextForm.js";
 import SelectOptionForm from "../../../components/userForm/SelectOptionForm.js";
 import ButtonForm from "../../../components/userForm/ButtonForm";
 import PositionInfoState from "../../models/data/state/PositionInfoState.js";
-import HadlerForm from "../../controllers/setStateForm/HadlerForm.js";
 import CreatChanceSelectHungler from "../../controllers/setStateSelect/CreatChanceSelectHungler.js";
 import CreateFormHungler from "../../controllers/userControllers/CreateFormHungler.js";
+import CreateArrayTextForm from "../../models/data/array/CreateArrayTextForm.js";
 
 function Form(props)
 {
     const {obj, setObj} = PositionInfoState();
 
     const [selectPoz, setSelectPoz] = useState ("all");
-
-    const {nameHandlerChange, countHandlerChange, 
-           priceHandlerChange, closePriceHandlerChange
-          } = HadlerForm(obj, setObj);
 
     const chanceSelectHungler = CreatChanceSelectHungler(selectPoz, 
                                                          setSelectPoz, 
@@ -27,34 +23,18 @@ function Form(props)
     return (
         <div className="user-form">
             <form className="user-form--form" onSubmit={formHungler}>
-                
-                <InputTextForm 
-                    nameInput={"Имя актива"}
-                    typeInput={"text"}
-                    obj={obj.nameA}
-                    event={nameHandlerChange}
-                />
-
-                <InputTextForm 
-                    nameInput={"Число акций"}
-                    typeInput={"number"}
-                    obj={obj.number}
-                    event={countHandlerChange}
-                />
-
-                <InputTextForm 
-                    nameInput={"Цена одной акции"}
-                    typeInput={"number"}
-                    obj={obj.price}
-                    event={priceHandlerChange}
-                />
-
-                <InputTextForm 
-                    nameInput={"Цена закрытия"}
-                    typeInput={"number"}
-                    obj={obj.priceClose}
-                    event={closePriceHandlerChange}
-                />
+                {
+                    CreateArrayTextForm(obj, setObj).map((el,index)=>(
+                      <InputTextForm 
+                          key={index}
+                          nameInput={el.nameInput}
+                          typeInput={el.typeInput}
+                          obj={el.obj}
+                          event={el.event}
+                      />
+                    )
+                    )
+                }
 
                 <SelectOptionForm 
                     selectPoz={selectPoz}
@@ -63,7 +43,6 @@ function Form(props)
                 
                 <ButtonForm>
                 </ButtonForm>
-
 
             </form>
         </div>
