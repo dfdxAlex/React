@@ -1,6 +1,6 @@
 import "./Portfel.css";
-import Profit from "./Profit";
-import ClickKill from "./ClickKill";
+import Profit from "../../models/profit/Profit";
+import CreateClickKill from "../../controllers/userControllers/CreateClickKill";
 import react, {useState} from "react"
 
 function Portfel(props) {
@@ -24,10 +24,7 @@ function Portfel(props) {
     delPozition="delPozition";
   }
 
-  function clickKillModul()
-  {
-    ClickKill(setObj);
-  }
+  const clickKillModul = CreateClickKill(setObj);
   
     return (
       <div className={delPozition}>

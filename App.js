@@ -1,5 +1,5 @@
-import Portfel from './components/VievPosition/Portfel.js';
-import Color from "./components/VievPosition/Color.js";
+import Portfel from './investor/views/position/Portfel.js';
+import Color from "./investor/views/Color.js";
 import Form from "./investor/views/form/Form.js"
 import MAS from "./investor/models/data/array/MasDefaultPosition.js"
 import react, {useState} from "react";
