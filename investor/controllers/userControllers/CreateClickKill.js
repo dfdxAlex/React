@@ -1,6 +1,6 @@
 
 const CreateClickKill = (setObj) => {
-    return function ClickKill(setObj)
+    return function ClickKill()
     {
       setObj({
         nameProps:'',
