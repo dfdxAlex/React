@@ -1,7 +1,7 @@
 
-function GetFormSelect(getSelectInForm)
+function GetFormSelect(getSelectInForm, setWorkArray)
 {
-  console.log(getSelectInForm);
+  setWorkArray(getSelectInForm);
 }
 
 export default GetFormSelect;
