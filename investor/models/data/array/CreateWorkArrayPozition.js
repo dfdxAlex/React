@@ -1,6 +1,5 @@
 
 const CreateWorkArrayPozition = (workArray, mas) => {
-    console.log("CreateWorkArrayPozition");
     return mas.filter((el)=>{
 
         if (workArray == "all") return true;

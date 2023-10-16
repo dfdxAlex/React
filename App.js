@@ -11,27 +11,25 @@ import CreateWorkArrayPozition from "./investor/models/data/array/CreateWorkArra
 function App() {
 
    const [mas, setMas] = useState(MAS);
+
    const [workArray, setWorkArray] = useState("all");
 
-   const newWorkArray = CreateWorkArrayPozition(workArray, mas);
-   
-   const [workArrayState, setWorkArrayState] = useState(newWorkArray);
-   {console.log(workArrayState)}
+   const newWorkArray=CreateWorkArrayPozition(workArray, mas);
 
   return (
     <Color>
       <Form 
         getSelect={getSelectInForm => GetFormSelect(getSelectInForm, setWorkArray)}
-        getObj={obj => GetObjUp (obj, setWorkArrayState)}
+        getObj={obj => GetObjUp (obj, setMas)}
       >
       </Form>
       
-      {workArrayState.map((el, index)=>(
+      {newWorkArray.map((el, index)=>(
             <Portfel  
               key={index}
               el={el}
-              mas={workArrayState} 
-              setMas={setWorkArrayState}
+              mas={newWorkArray} 
+              setMas={setMas}
             />
           ))}
 
