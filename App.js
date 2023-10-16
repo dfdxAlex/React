@@ -23,8 +23,8 @@ function App() {
         getObj={obj => GetObjUp (obj, setMas)}
       >
       </Form>
-      
-      {newWorkArray.map((el, index)=>(
+      {(newWorkArray.length == 0) && <h1>Массив пуст</h1>}
+      {(newWorkArray.length != 0) && newWorkArray.map((el, index)=>(
             <Portfel  
               key={index}
               el={el}
