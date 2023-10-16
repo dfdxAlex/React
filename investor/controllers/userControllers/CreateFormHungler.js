@@ -12,6 +12,7 @@ const CreateFormHungler = (obj, setObj, props) => {
                             number:'', 
                             price:'', 
                             priceClose:''});
+                    
                     props.getObj(obj);
                   }
     };

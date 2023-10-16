@@ -1,12 +1,13 @@
 
-const CreateClickKill = (setObj) => {
-    return function ClickKill()
+const CreateClickKill = (props) => {
+    return function ClickKill(el)
     {
-      setObj({
-        nameProps:'',
-        propsNumber:'',
-        priceProps:''
-      });
+      const newArray = props.mas.filter(
+        (elArray) => {
+          if (elArray.nameA!=el.target.name) return true;
+        }
+      );
+      props.setMas(newArray);
     }  
 }
 

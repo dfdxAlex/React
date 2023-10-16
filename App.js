@@ -13,22 +13,25 @@ function App() {
    const [mas, setMas] = useState(MAS);
    const [workArray, setWorkArray] = useState("all");
 
-
    const newWorkArray = CreateWorkArrayPozition(workArray, mas);
+   
+   const [workArrayState, setWorkArrayState] = useState(newWorkArray);
+   {console.log(workArrayState)}
 
   return (
     <Color>
-
       <Form 
         getSelect={getSelectInForm => GetFormSelect(getSelectInForm, setWorkArray)}
-        getObj={obj => GetObjUp (obj, setMas)}
+        getObj={obj => GetObjUp (obj, setWorkArrayState)}
       >
       </Form>
-
-      {newWorkArray.map((el, index)=>(
+      
+      {workArrayState.map((el, index)=>(
             <Portfel  
               key={index}
               el={el}
+              mas={workArrayState} 
+              setMas={setWorkArrayState}
             />
           ))}
 
