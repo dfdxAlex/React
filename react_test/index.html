@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+    
+    class Summ
+    {
+        constructor(a, b)
+        {
+            this.a = a;
+            this.b = b;
+            this.c=a+b;
+        }
+
+        setAB(a,b)
+        {
+            this.a = a;
+            this.b = b;
+        }
+
+        getC()
+        {
+            return this.a + this.b;
+        }
+    }
+
+    class Arifmetic extends Summ
+    {
+        constructor(a, b)
+        {
+            super(a, b);
+        }
+    }
+
+    const x = new Arifmetic(4,5);
+
+
+      function Hello() {
+        return <h1>{x.c}</h1>;
+      }
+
+    x.setAB(40,50);
+
+      function Hello2() {
+        return <h1>{x.getC()}</h1>;
+      }
+
+      const container = document.getElementById('mydiv');
+      const root = ReactDOM.createRoot(container);
+      root.render(<div><Hello /><Hello2 /></div>)
+
+    </script>
+
+  </body>
+</html>

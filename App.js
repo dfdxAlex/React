@@ -10,11 +10,11 @@ import CreateWorkArrayPozition from "./investor/models/data/array/CreateWorkArra
 
 function App() {
 
-   const [mas, setMas] = useState(MAS);
+  const [mas, setMas] = useState(MAS);
 
-   const [workArray, setWorkArray] = useState("all");
+  const [workArray, setWorkArray] = useState("all");
 
-   const newWorkArray=CreateWorkArrayPozition(workArray, mas);
+  const newWorkArray=CreateWorkArrayPozition(workArray, mas);
 
   return (
     <Color>
